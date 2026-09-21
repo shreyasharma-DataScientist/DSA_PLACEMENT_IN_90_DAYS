@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050">
+<rect width="1800" height="1050" fill="#fff"/>
+
+<style>
+.t{font:700 30px Arial,sans-serif;fill:#222}.code{font:18px "Courier New",monospace;fill:#17365d}
+.lbl{font:700 21px Arial,sans-serif}.num{font:20px Arial,sans-serif}
+.ax{stroke:#244fca;stroke-width:4;fill:none}.thin{stroke:#777;stroke-width:3;fill:none}
+.blue{stroke:#244fca;stroke-width:5;fill:none}.green{stroke:#19a974;stroke-width:5;fill:none}
+.pink{stroke:#c34be6;stroke-width:5;fill:none}.orange{stroke:#ef8a24;stroke-width:5;fill:none}
+.red{stroke:#df3434;stroke-width:5;fill:none}.blk{stroke:#222;stroke-width:4;fill:none}
+</style>
+
+<!-- HAND-DRAWN LOGIC DIAGRAM: same placement/idea as screenshot -->
+<g transform="translate(55,55)">
+  <!-- central X -->
+  <circle cx="125" cy="245" r="14" fill="#f2c2ff" stroke="#8e2caf" stroke-width="3"/>
+  <text x="112" y="252" class="lbl" fill="#8e2caf">X</text>
+
+  <!-- main branches -->
+  <path d="M139 238 L330 92" class="pink"/>
+  <path d="M139 252 L330 345" class="blue"/>
+  <path d="M330 345 L475 215" class="blue"/>
+  <path d="M330 345 L475 290" class="blue"/>
+  <path d="M330 345 L475 430" class="blk"/>
+  <path d="M475 215 L610 155" class="blk"/>
+  <path d="M475 215 L610 245" class="blk"/>
+  <path d="M475 290 L610 335" class="blk"/>
+  <path d="M475 290 L610 405" class="blk"/>
+
+  <!-- vertical reference lines -->
+  <path d="M125 245 L125 150" class="pink"/>
+  <path d="M330 345 L330 430" class="blue"/>
+  <path d="M475 215 L475 290" class="blue"/>
+
+  <!-- arrowheads -->
+  <path d="M330 92 l-18 5 l10 14" class="pink"/>
+  <path d="M330 345 l-13 -15 l-5 17" class="blue"/>
+  <path d="M475 215 l-15 8 l12 8" class="blue"/>
+
+  <circle cx="330" cy="345" r="13" fill="#c5d9ff" stroke="#244fca" stroke-width="3"/>
+  <circle cx="475" cy="215" r="13" fill="#c8f5df" stroke="#19a974" stroke-width="3"/>
+  <circle cx="475" cy="290" r="13" fill="#c8f5df" stroke="#19a974" stroke-width="3"/>
+
+  <text x="318" y="377" class="lbl" fill="#244fca">y</text>
+  <text x="468" y="198" class="lbl" fill="#19a974">a</text>
+  <text x="468" y="317" class="lbl" fill="#19a974">b</text>
+
+  <text x="250" y="145" class="lbl" fill="#c34be6">ΔP₁</text>
+  <text x="370" y="245" class="lbl" fill="#244fca">ΔP₂</text>
+  <text x="390" y="315" class="lbl" fill="#244fca">ΔP₃</text>
+  <text x="600" y="145" class="lbl">c</text>
+  <text x="600" y="245" class="lbl">d</text>
+  <text x="600" y="335" class="lbl">e</text>
+  <text x="600" y="410" class="lbl">f</text>
+</g>
+
+<!-- RIGHT STOCK GRAPH -->
+<g transform="translate(930,50)">
+  <!-- axes -->
+  <line x1="80" y1="620" x2="710" y2="620" class="ax"/>
+  <line x1="80" y1="620" x2="80" y2="55" class="ax"/>
+  <path d="M710 620 l-18 -10 M710 620 l-18 10" class="ax"/>
+  <path d="M80 55 l-10 18 M80 55 l10 18" class="ax"/>
+
+  <!-- horizontal guides -->
+  <line x1="135" y1="540" x2="675" y2="540" stroke="#aaa" stroke-width="3"/>
+  <line x1="135" y1="460" x2="675" y2="460" stroke="#aaa" stroke-width="3"/>
+  <line x1="135" y1="380" x2="675" y2="380" stroke="#aaa" stroke-width="3"/>
+  <line x1="135" y1="300" x2="675" y2="300" stroke="#aaa" stroke-width="3"/>
+  <line x1="135" y1="220" x2="675" y2="220" stroke="#aaa" stroke-width="3"/>
+
+  <!-- exact price path: 7,1,5,3,6,4 -->
+  <polyline points="150,90 245,540 340,220 435,380 530,140 625,300" class="thin"/>
+  <polyline points="245,540 340,220" class="green"/>
+  <polyline points="340,220 435,380" class="blue"/>
+  <polyline points="435,380 530,140" class="blue"/>
+  <polyline points="530,140 625,300" class="orange"/>
+
+  <!-- points -->
+  <g fill="#244fca">
+    <circle cx="150" cy="90" r="8"/>
+    <circle cx="245" cy="540" r="8"/>
+    <circle cx="340" cy="220" r="8"/>
+    <circle cx="435" cy="380" r="8"/>
+    <circle cx="530" cy="140" r="8"/>
+    <circle cx="625" cy="300" r="8"/>
+  </g>
+
+  <!-- A: 1 to 5 -->
+  <line x1="245" y1="540" x2="245" y2="220" class="green"/>
+  <path d="M245 220 l-10 18 M245 220 l10 18 M245 540 l-10 -18 M245 540 l10 -18" class="green"/>
+  <text x="215" y="395" class="lbl" fill="#19a974">A</text>
+
+  <!-- B: 5 to 3 -->
+  <line x1="380" y1="220" x2="380" y2="380" class="blue"/>
+  <text x="395" y="315" class="lbl" fill="#244fca">B</text>
+
+  <!-- C: 1 to 6 -->
+  <line x1="680" y1="540" x2="680" y2="140" class="red"/>
+  <path d="M680 140 l-10 18 M680 140 l10 18 M680 540 l-10 -18 M680 540 l10 -18" class="red"/>
+  <text x="705" y="360" class="lbl" fill="#df3434">C</text>
+
+  <!-- x labels -->
+  <text x="142" y="655" class="num">1</text><text x="237" y="655" class="num">2</text>
+  <text x="332" y="655" class="num">3</text><text x="427" y="655" class="num">4</text>
+  <text x="522" y="655" class="num">5</text><text x="617" y="655" class="num">6</text>
+  <text x="680" y="655" class="num">7</text>
+
+  <!-- y labels -->
+  <text x="42" y="548" class="num">1</text><text x="42" y="468" class="num">2</text>
+  <text x="42" y="388" class="num">3</text><text x="42" y="308" class="num">4</text>
+  <text x="42" y="228" class="num">5</text><text x="42" y="148" class="num">6</text>
+  <text x="42" y="98" class="num">7</text>
+
+  <!-- point values -->
+  <text x="140" y="75" class="lbl" fill="#c34be6">7</text>
+  <text x="232" y="575" class="lbl" fill="#244fca">1</text>
+  <text x="330" y="205" class="lbl" fill="#244fca">5</text>
+  <text x="425" y="405" class="lbl" fill="#244fca">3</text>
+  <text x="520" y="125" class="lbl" fill="#244fca">6</text>
+  <text x="615" y="325" class="lbl" fill="#ef8a24">4</text>
+
+  <text x="500" y="700" class="lbl" fill="#244fca">A+B &gt; C</text>
+</g>
+
+<!-- TITLE -->
+<text x="900" y="790" text-anchor="middle" class="t">122. Best Time to Buy and Sell Stock II</text>
+
+<!-- code block, matching screenshot content -->
+<g transform="translate(465,825)">
+  <text y="0" class="code">class Solution {</text>
+  <text y="25" class="code">  public int maxProfit(int[] prices) {</text>
+  <text y="50" class="code">    int maxProfit = 0;</text>
+  <text y="75" class="code">    // T: O(n)</text>
+  <text y="100" class="code">    // S: O(1)</text>
+  <text y="125" class="code">    // [7,1,5,3,6,4]</text>
+  <text y="150" class="code">    for (int i = 1; i &lt; prices.length; i++) {</text>
+  <text y="175" class="code">      if (prices[i] &gt; prices[i - 1]) {</text>
+  <text y="200" class="code">        maxProfit += prices[i] - prices[i - 1];</text>
+  <text y="225" class="code">      }</text>
+  <text y="250" class="code">    }</text>
+  <text y="275" class="code">    return maxProfit;</text>
+  <text y="300" class="code">  }</text>
+  <text y="325" class="code">}</text>
+</g>
+</svg>
